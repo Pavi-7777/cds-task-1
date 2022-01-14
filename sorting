@@ -1,0 +1,28 @@
+import java.util.Arrays;
+import java.util.Scanner;
+public class sortting {
+    public static void main(String[] args) {
+        Scanner sc1=new Scanner(System.in);
+        System.out.println("Enter no.of element:");
+        int a=sc1.nextInt();
+        int b[]=new int[a];
+        for (int p=0;p<a;p++){
+            System.out.println("Enter element of: "+(p+1));
+            b[p]=sc1.nextInt();
+        }
+        int i,j;
+        for (i=0;i<a;i++){
+            for (j=i+1;j<a;j++){
+                if (b[i]>=b[j]){
+                    int temp=b[i];
+                    b[i]=b[j];
+                    b[j]=temp;
+                }
+            }
+        }
+         System.out.println(Arrays.toString(b));
+        for (int k=0;k<a;k++){
+            System.out.print(b[k]+" ");
+        }
+    }
+}
