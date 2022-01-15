@@ -1,0 +1,38 @@
+import java.util.Scanner;
+import java.util.Arrays;
+public class Dimondword {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a String: ");
+        String name=sc.next();
+        int len=name.length();
+        char arr[]=name.toCharArray();
+        System.out.println(Arrays.toString(arr));
+        int space=len-1;
+        int count=1;
+        for (int i=0;i<len;i++){
+            for(int j=0;j<space;j++){
+                System.out.print(" ");
+            }
+            for (int k=0;k<count;k++){
+                System.out.print(arr[k]+" ");
+            }
+            space--;
+            count++;
+            System.out.println();
+        }
+        int space1=1;
+        int count1=len-1;
+        for (int i=0;i<len;i++){
+            for(int j=0;j<space1;j++){
+                System.out.print(" ");
+            }
+            for (int k=0;k<count1;k++){
+                System.out.print(arr[k]+" ");
+            }
+            space1++;
+            count1--;
+            System.out.println();
+        }
+    }
+}
