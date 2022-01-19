@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Arrowhead {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a String: ");
+        String input=sc.next();
+        char arr[]=input.toCharArray();
+        int len=input.length();
+        int extra=1;
+        for (int i=0;i<len;i++){
+            for (int j=0;j<extra;j++){
+                System.out.print(arr[j]);
+            }
+            extra++;
+            System.out.println();
+        }
+        int extra1=len-1;
+        for (int i=0;i<len;i++){
+            for (int j=0;j<extra-1;j++){
+                System.out.print(arr[j]);
+            }
+            extra--;
+            System.out.println();
+        }
+    }
+}
