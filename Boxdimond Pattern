@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Boxdimond {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a Number: ");
+        int num=sc.nextInt();
+        int space=0;
+        int size=num;
+        for (int i=0;i<num;i++) {
+            for (int j = 0; j < size; j++) {
+                System.out.print("*");
+            }
+            for (int k = 0; k < space; k++) {
+                System.out.print(" ");
+            }
+            for (int k = 0; k < size; k++) {
+                System.out.print("*");
+            }
+            space = space + 2;
+            size--;
+            System.out.println();
+        }
+            int size1=1;
+            int space1=(num*2)-2;
+            for (int a=0;a<num;a++){
+                for (int b=0;b<size1;b++){
+                    System.out.print("*");
+                }
+                for (int c=0;c<space1;c++){
+                    System.out.print(" ");
+                }
+                for (int d=0;d<size1;d++){
+                    System.out.print("*");
+                }
+                size1++;
+                space1=space1-2;
+                System.out.println();
+            }
+        }
+    }
+
