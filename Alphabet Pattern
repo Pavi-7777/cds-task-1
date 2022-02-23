@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Alpha_pattern {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter a Size: ");
+        int num=sc.nextInt();
+        String alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        char arr[]=alpha.toCharArray();
+        int i,j;
+        int size=1;
+        int size1=num;
+       for(i=0;i<num;i++){
+            for(j=0;j<size1;j++){
+                System.out.print(arr[j]);
+            }
+            for (int k=size1-2;k>=0;k--){
+                System.out.print(arr[k]);
+            }
+        System.out.println();
+            for (int l=0;l<size;l++){
+                System.out.print(" ");
+            }
+            size++;
+            size1--;
+        }
+    }
+}
