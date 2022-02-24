@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class alphabet {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a size of alphabet: ");
+        int size=sc.nextInt();
+        String alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        char arr[]=alpha.toCharArray();
+        int i,j,l;
+        int  space=1;
+        int al=0,al2=0;
+        int al1=size-1;
+             for(int k=0;k<size;k++){
+            for(i=al;i<size;i++) {
+                System.out.print(arr[i]);
+            }
+                 for(l=al1;l>=al2;l--) {
+                     System.out.print(arr[l]);
+                 }
+            System.out.println();
+               for (j=0;j<space;j++){
+                   System.out.print(" ");
+               }
+                space++;
+               al++;
+               al2++;
+            }
+       }
+
+        }
