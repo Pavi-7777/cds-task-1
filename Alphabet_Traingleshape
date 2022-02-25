@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Space_Triangle {
+    public static void main(String[] args) {
+        String alpha="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        char arr[]=alpha.toCharArray();
+        int i,j,k;
+        int len=alpha.length();
+        System.out.println(len);
+        int size=1;
+        int space=len;
+        for (i=0;i<len;i++){
+            for (j=0;j<space;j++){
+                System.out.print(" ");
+            }
+            for (k=0;k<size;k++){
+                System.out.print(arr[k]);
+                System.out.print(" ");
+            }
+            System.out.println();
+            size++;
+            space--;
+        }
+    }
+}
