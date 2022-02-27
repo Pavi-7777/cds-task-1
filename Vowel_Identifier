@@ -1,0 +1,26 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Vowels {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a Sentence: ");
+        String  name=sc.nextLine();
+        char narr[]=name.toCharArray();
+        char vow[]={'a','e','i','o','u'};
+        int i,j;
+        char ch=' ';
+        for (i=0;i<narr.length;i++){
+            for (j=0;j<vow.length;j++) {
+                ch = Character.toLowerCase(narr[i]);
+                if (ch == vow[j]) {
+                    if (Character.isUpperCase(narr[i])) {
+                        narr[i] = Character.toLowerCase(narr[i]);
+                    } else {
+                        narr[i] = Character.toUpperCase(narr[i]);
+                    }}}}
+        for (int k=0;k<narr.length;k++){
+            System.out.print(narr[k]);
+        }
+    }
+}
