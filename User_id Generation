@@ -1,0 +1,70 @@
+import java.util.Scanner;
+public class User_Id {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("First_Name: ");
+        String fname=sc.next();
+        System.out.println("Last_Name: ");
+        String lname=sc.next();
+        System.out.println("Pin: ");
+        String pin=sc.next();
+        int a=pin.length();
+        System.out.println("N: ");
+        int n=sc.nextInt();
+        String smaller="",longer="";
+        char df=' ',dl=' ';
+        String ind="abcdefghijklmnopqrstuvwxyz";
+        if(fname.length()==lname.length()){
+            for (int l=0;l<fname.length();l++){
+                df=Character.toLowerCase(fname.charAt(l));
+                dl=Character.toLowerCase(lname.charAt(l));
+            if (df==dl){
+                continue;}
+            else{
+                if(ind.indexOf(df)>ind.indexOf(dl)){
+                    longer=fname;
+                    smaller=lname;
+                }
+                else{
+                    smaller=fname;
+                    longer=lname;
+                }
+                break;
+            }
+        }}
+        if (fname.length()>lname.length()){
+            longer=fname;
+            smaller=lname;
+        }
+        if (lname.length()>fname.length()){
+            longer=lname;
+            smaller=fname;
+        }
+        int slen=smaller.length();
+        if(Character.isUpperCase(smaller.charAt(slen-1))){
+        System.out.print(Character.toLowerCase(smaller.charAt(slen-1)));
+        }else{
+            System.out.print(Character.toUpperCase(smaller.charAt(slen-1)));
+        }
+        char ld[]=longer.toCharArray();
+        for (int i=0;i<ld.length;i++){
+            if(Character.isUpperCase(ld[i])){
+        System.out.print(Character.toLowerCase(ld[i]));
+            }else{
+                System.out.print(Character.toUpperCase(ld[i]));
+            }
+        }
+        int arr1[]={};
+        int sum=0;
+        String temp=pin.substring(n-1,n);
+        System.out.print(temp);
+        char []temp2=pin.toCharArray();
+        for (int i=a;i>0;i--){
+            if (i==(a-n)){
+                int val=a-n;
+                System.out.print(temp2[val]);
+                break;
+            }
+        }
+    }
+}
