@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class Zero_one {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        int i,j,k,temp=num;
+        int size=1;
+        for(i=0;i<num;i++){
+            for(j=0;j<size;j++){
+                int rem=temp%2;
+                System.out.print(rem+" ");
+                if(rem==1){
+                    temp=num-1;
+                }
+                else{
+                    temp=num;
+                }
+            }
+            if((i+1)%2==0){
+                temp=temp+1;
+            }
+            size++;
+            System.out.println();
+        }
+    }
+}
