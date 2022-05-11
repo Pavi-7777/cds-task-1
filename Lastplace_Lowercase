@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    String s=sc.nextLine();
+	    char ar[]=s.toCharArray();
+	    for(int i=0;i<ar.length-1;i++){
+	        for(int j=i+1;j<ar.length;j++){
+	        if(Character.isLowerCase(ar[i]) && Character.isUpperCase(ar[j])){
+	            char t=ar[i];
+	            ar[i]=ar[j];
+	            ar[j]=t;
+	        }
+	        }
+	    }
+	System.out.println(Arrays.toString(ar));
+	System.out.println(String.copyValueOf(ar));
+	}
+}
